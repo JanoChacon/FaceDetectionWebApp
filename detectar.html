@@ -20,7 +20,9 @@
 
 <body>
     URL imagen:
-    <input type="text" name="inputImage" id="inputImage" value="https://upload.wikimedia.org/wikipedia/commons/c/c3/RH_Louise_Lillian_Gish.jpg" />
+    <!-- foto hermosa https://i.imgur.com/cjFQJ3z.png-->
+    <!--wiki https://upload.wikimedia.org/wikipedia/commons/c/c3/RH_Louise_Lillian_Gish.jpg-->
+    <input type="text" name="inputImage" id="inputImage" value="https://i.imgur.com/cjFQJ3z.png" />
     <button onclick='detectarRostro(document.getElementById("inputImage").value,"image_url")'>Detectar Rostro</button><br><br>
     <div id="wrapper" style="width:1020px; display:table;">
         <div id="jsonOutput" style="width:600px; display:table-cell;">
@@ -44,8 +46,7 @@
 
 </body>
 
-<script src="tomarfoto.js"></script>
-<script src="detectface.js"></script>
-<script src="compareface.js"></script>
+<script src="js/tomarfoto.js"></script>
+<script src="js/faceapi.js"></script>
 
 </html>
