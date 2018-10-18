@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Prueba rostro api</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        background-color: cadetblue;
+    }
+
+    #video {
+        width: 260px;
+        height: 200px;
+        background-color: #666;
+    }
+</style>
+
+<body onLoad="setInterval('contador()',20000);">
+    <div>
+        <nav class="navbar navbar-dark bg-dark">
+            <span class="navbar-brand mb-0 h1">Ejemplo</span>
+        </nav>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="jumbotron">
+                    <div class="container" id="videoElement">
+                        <video id="video" muted="muted"></video>
+                    </div>
+                    <canvas id="canvas" style="display: none;"></canvas>
+                    <div class="container">
+                        data:
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="jumbotron">
+                    <div class="container">
+                        <h1 class="display-4">Titulo de Ejemplo</h1>
+                        <p class="text-justify">
+                            Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de
+                            tipografías o de borradores de diseño para probar el diseño visual antes de insertar el
+                            texto final.
+
+                            Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología
+                            clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del
+                            siglo XVI.1​ Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al
+                            texto lorem ipsum nueva popularidad.
+
+                            El texto en sí no tiene sentido, aunque no es completamente aleatorio, sino que deriva de
+                            un texto de Cicerón en lengua latina, a cuyas palabras se les han eliminado sílabas o
+                            letras. El significado del texto no tiene importancia, ya que solo es una demostración o
+                            prueba, pero se inspira en la obra de Cicerón De finibus bonorum et malorum (Sobre los
+                            límites del bien y del mal) que comienza con:
+
+                            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/foto.js"></script>
+<script src="js/faceapi.js"></script>
+
+<script>
+    setInterval('detectar()',20000);
+</script>
+
+</html>

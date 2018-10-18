@@ -11,12 +11,9 @@ function detectarRostro(source, sourceType) {
             if (xhr.status === 200) {
                 var json = JSON.stringify(JSON.parse(xhr.responseText), null, '  ');
                 try {
-                    $("#responseTextArea").html(html);
-                    //return json;
+                    return json;
                 } catch (err) {
-                    $("#responseTextArea").text(json);
-                    document.querySelector("#sourceImage").src = source;
-                    //return json;
+                    return json;
                 }
             } else {
                 $("#responseTextArea").text("no detectado");
