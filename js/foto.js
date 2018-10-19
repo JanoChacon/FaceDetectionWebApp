@@ -22,6 +22,7 @@ if (navigator.mediaDevices.getUserMedia) {
 				var foto = $canvas.toDataURL(); //Esta es la foto, en base 64	
 				//Reanudar reproducción
 				$video.play();
+				
 				return foto;
 			};
 		})

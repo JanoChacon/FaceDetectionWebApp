@@ -24,8 +24,8 @@
         background-color: #666;
     }
 </style>
-
-<body onLoad="setInterval('contador()',20000);">
+<!--onLoad="setInterval('contador()',20000);"-->
+<body>
     <div>
         <nav class="navbar navbar-dark bg-dark">
             <span class="navbar-brand mb-0 h1">Ejemplo</span>
@@ -41,9 +41,9 @@
                     </div>
                     <canvas id="canvas" style="display: none;"></canvas>
                     <div class="container">
-                        data:
+                        <p id="responseTextArea"></p>
                     </div>
-
+                    <br>
                 </div>
             </div>
             <div class="col-8">
@@ -74,11 +74,11 @@
         </div>
     </div>
 </body>
-<script src="js/foto.js"></script>
-<script src="js/faceapi.js"></script>
+
+<script src="js/unjscualquiera.js"></script>
 
 <script>
-    setInterval('detectar()',20000);
+    setInterval('detectar()', 5000);
 </script>
 
 </html>
