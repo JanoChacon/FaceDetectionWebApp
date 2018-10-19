@@ -19,12 +19,13 @@
     }
 
     #video {
-        width: 260px;
-        height: 200px;
+        width: 100%;
+        height: auto;
         background-color: #666;
     }
 </style>
 <!--onLoad="setInterval('contador()',20000);"-->
+
 <body>
     <div>
         <nav class="navbar navbar-dark bg-dark">
@@ -41,7 +42,10 @@
                     </div>
                     <canvas id="canvas" style="display: none;"></canvas>
                     <div class="container">
-                        <p id="responseTextArea"></p>
+                        <p>confiabilidad rostro:</p>
+                        <p id="responseTextArea1"></p>
+                        <p>confianza rostros:</p>
+                        <p id="responseTextArea2"></p>
                     </div>
                     <br>
                 </div>
@@ -73,6 +77,8 @@
             </div>
         </div>
     </div>
+    <input type="text" name="inputImage" id="inputImage" style="display: none;" 
+        value="https://i.imgur.com/cjFQJ3z.png" />
 </body>
 
 <script src="js/unjscualquiera.js"></script>

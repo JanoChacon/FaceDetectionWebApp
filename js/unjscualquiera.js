@@ -32,6 +32,8 @@ function detectar() {
     $video.play();
 
     detectarRostro(foto, 'image_base64');
+    compararRostros(foto, "image_base64_1", document.getElementById("inputImage").value, "image_url2")
+    //compararRostros(foto, "image_base64_1", "https://i.imgur.com/cjFQJ3z.png", "image_url2");
    
 };
 
@@ -44,12 +46,12 @@ function detectarRostro(source, sourceType) {
             if (xhr.status === 200) {
                 json = JSON.parse(xhr.responseText);
                 try {
-                    document.getElementById("responseTextArea").innerHTML = json.faces[0].attributes.facequality.value;
+                    document.getElementById("responseTextArea1").innerHTML = json.faces[0].attributes.facequality.value;
                 } catch (error) {
-                    $("#responseTextArea").text("no detectado");
+                    $("#responseTextArea1").text("no detectado");
                 }
             } else {
-                $("#responseTextArea").text("no detectado");
+                $("#responseTextArea1").text("no detectado");
             }
         }
     };
@@ -72,10 +74,13 @@ function compararRostros(source1, source1type, source2, source2type) {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 json = JSON.parse(xhr.responseText);
-                $("#responseTextArea").text(json);
-                return json;
+                try {
+                    document.getElementById("responseTextArea2").innerHTML = json.confidence;
+                } catch (error) {
+                    $("#responseTextArea2").text("no detectado");
+                }
             } else {
-                $("#responseTextArea").text("error");
+                $("#responseTextArea2").text("error");
             }
         }
     };
